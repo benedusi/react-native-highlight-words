@@ -33,6 +33,7 @@ And the `Highlighter` component will highlight all occurrences of search terms w
 | Property        | Type          | Required? | Description                                                                                                             |
 |:----------------|:--------------|:---------:|:------------------------------------------------------------------------------------------------------------------------|
 | autoEscape      | Boolean       |           | Escape characters which are meaningful in regular expressions                                                           |
+| caseSensitive   | Boolean       |           | Make search case senstive (default:false)                                                                               |
 | highlightStyle  | Object        |           | Styles applied to highlighted text                                                                                      |
 | sanitize        | Function      |           | Process each search word and text to highlight before comparing (eg remove accents); signature `(text: string): string` |
 | searchWords     | Array<String> |     ✓     | Array of search words                                                                                                   |
