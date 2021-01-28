@@ -8,6 +8,11 @@ type HighlighterProps = {
   autoEscape?: boolean;
 
   /**
+   * Escape characters which are meaningful in regular expressions
+   */
+  caseSensitive?: boolean;
+
+  /**
    * Styles applied to highlighted text
    */
   highlightStyle?: StyleProp<TextStyle>;

@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 
 Highlighter.propTypes = {
     autoEscape: PropTypes.bool,
+    caseSensitive: PropTypes.bool,
     highlightStyle: Text.propTypes.style,
     searchWords: PropTypes.arrayOf(PropTypes.string).isRequired,
     textToHighlight: PropTypes.string.isRequired,
@@ -18,6 +19,7 @@ Highlighter.propTypes = {
 */
 export default function Highlighter({
     autoEscape,
+    caseSensitive,
     highlightStyle,
     searchWords,
     textToHighlight,
@@ -25,7 +27,7 @@ export default function Highlighter({
     style,
     ...props
 }) {
-    const chunks = findAll({textToHighlight, searchWords, sanitize, autoEscape});
+    const chunks = findAll({textToHighlight, searchWords, sanitize, autoEscape, caseSensitive});
 
     return (
         <Text style={style} {...props}>
